@@ -3,30 +3,30 @@
 
 namespace GSGCource.Task1
 {
-    internal class SoftwareEngineer : Engineer
+    public class SoftwareEngineer : Engineer
     {
-        private string _language;
+        public string Language;
         public SoftwareEngineer(string name, int age, int yearsOfExpirence, string currentCampany, string language) : base(name, age, yearsOfExpirence, currentCampany)
         {
-            _language = language;
+            Language = language;
         }
 
-        protected internal override void FunctionalAnalysis()
+        public override void FunctionalAnalysis()
         {
             Console.WriteLine("The software analysis was completed with success.");
         }
 
-        protected internal override void RequirementsGathering()
+        public override void RequirementsGathering()
         {
             Console.WriteLine("The software requirements were verified with success.");
         }
 
-        protected internal override void Development()
+        public override void Development()
         {
-            Console.WriteLine(string.Format("The software development was finished using {0}.", this._language));
+            Console.WriteLine(string.Format("The software development was finished using {0}.", Language));
         }
 
-        protected internal override void Testing()
+        public override void Testing()
         {
             Console.WriteLine("The software test was executed with success.");
         }
